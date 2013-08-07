@@ -1,0 +1,159 @@
+
+body {
+	padding: 0px;
+	margin: 0px;
+	color: #333;
+	font-family: sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	color: #00f;
+}
+
+#top-bar {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	height: 40px;
+	margin: 0;
+	padding: 0;
+	background-image: url(top_back.png);
+	background-repeat: repeat-x;
+	font-size: small;
+	font-family: courier;
+}
+
+#top-bar a {
+	display: inline-block;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-top: 0.8em;
+	padding-bottom: 0.7em;
+	margin: 0px;
+}
+
+#logo {
+	display: block;
+	padding-top: 10px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	float: left;
+}
+
+#user {
+	display: block;
+	font-style: italic;
+	float: right;
+	padding-right: 2em;
+}
+
+#user img {
+	vertical-align: middle;
+	padding-right: 1em;
+}
+
+#user-name {
+	text-decoration: underline;
+}
+
+#bar {
+	display: block;
+	clear: both;
+	width: 100%;
+	font-style: italic;
+	background-image: url(tab_back.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	padding-left: 200px;
+	position: relative;
+	top: -35px;
+	margin-bottom: -35px;
+}
+
+#bar .tab {
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 18px;
+	width: 99px;
+	background-image: url(tab_tab.png);
+	padding-top: 13px;
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-bottom: 5px;
+	margin: 0px;
+	text-align: center;
+}
+
+.issue {
+	padding-left: 1em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	padding-right: 1em;
+}
+
+.issue > div,
+.issue > img,
+.issue > ul {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0.5em;
+	margin: 0px;
+}
+
+.issue .number {
+	font-size: 200%;
+}
+
+.issue .importance {
+	font-size: 150%;
+}
+
+.issue .importance .votecount {
+	display: block;
+	border: thin solid black;
+	padding: 0.05em;
+	margin: 0.1em;
+}
+
+.issue .tags li {
+	display: block;
+	font-size: smaller;
+}
+
+.issue .tags .city {
+	text-decoration: underline;
+}
+
+.issue .tags .category {
+	text-decoration: underline;
+}
+
+.issue .tags .shorttimeleft {
+	color: #a00;
+}
+
+.issue .description {
+	display: inline-block;
+	vertical-align: middle;
+	width: 50%;
+}
+
+.issue .description .title {
+	font-size: larger;
+	font-weight: bold;
+}
+
+.issue .description .commentcount {
+	color: #22bf76;
+}
+
+hr {
+	margin-left: 5em;
+	margin-right: 5em;
+}
