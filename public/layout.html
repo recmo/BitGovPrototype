@@ -1,0 +1,102 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>BitGov: Voters without borders.</title>
+<link rel="stylesheet" href="layout.css" type="text/css"/>
+</head>
+<body>
+
+<div id="top-bar">
+<a href="#">Health &amp; Safety</a>
+<a href="#">Environment</a>
+<a href="#">Communications</a>
+<a href="#">Administrative</a>
+<a href="#">Security</a>
+<a href="#">Economy</a>
+<a href="#">Foreign Policy</a>
+<a href="#">Infrastructure</a>
+<a href="#">Education</a>
+<a href="#">More...</a>
+</div>
+
+<a href="#"><img id="logo" src="bitgov.png"/></a>
+
+<div id="user">
+<a href="#"><img id="user-head" src="joseph.png"/></a>
+<span>
+Hi <a id="user-name" href="#">Joseph</a> | <a href="#">Settings</a>
+</span>
+</div>
+
+<div id="bar">
+<a class="tab" href="#">Human Rights</a>
+<a class="tab" href="#">Environment</a>
+<a class="tab" href="#">Palo Alto</a>
+</div>
+
+<script type="text/javascript">
+
+function print_issue(number, issue)
+{
+	// @todo days to go formatting
+	// @todo categories enumerate
+	document.write('<div class="issue">\n\
+		<div class="number">' + number + '.</div>\n\
+		<div class="importance">\n\
+			<div class="votecount upvotes">&#x1f44d; ' + issue.upvotes + '</div>\n\
+			<div class="votecount downvotes">&#x1f44e; ' + issue.downvotes + '</div>\n\
+		</div>\n\
+		<img class="map" src="' + issue.map + '"/>\n\
+		<ul class="tags">\n\
+			<li class="location"><a class="city">' + issue.city + '</a> (' + issue.other_location + ')</li>\n\
+			<li>Class: ' + issue.region_class + '</li>\n\
+			<li><span class="timeleft shorttimeleft">' + issue.days_to_go + ' days</span> to go</li>\n\
+			<li>Category: <a class="category">' + issue.categories[0] + '</a></li>\n\
+		</ul>\n\
+		<div class="description">\n\
+			<div class="title">' + issue.title + '<span class="bill">(' + issue.reference + ')</span></div>\n\
+			<div class="summary">' + issue.summary + ' (<span class="commentcount">' + issue.commentcount + ' comments</span>)</div>\n\
+		</div>\n\
+	</div>');
+}
+
+for(i = 0; i < 10; ++i) {
+
+print_issue(1, {
+	upvotes: 1248,
+	downvotes: 234,
+	map: "map.png",
+	city: "Palo Alto",
+	other_location: "CA, USA",
+	region_class: 'municipal',
+	days_to_go: 3,
+	categories: ["Infrastructure"],
+	title: "Pedestrianise Main Street, Palo Alto",
+	reference: "L. 6542",
+	summary: "To introduce a pedestrian-only zone on Main Street, Palo Alto, between Union St. and Grand St., from friday to Monday.",
+	commentcount: 578
+});
+
+document.write('<hr/>');
+
+}
+
+print_issue(1, {
+	upvotes: 1248,
+	downvotes: 234,
+	map: "map.png",
+	city: "Palo Alto",
+	other_location: "CA, USA",
+	region_class: 'municipal',
+	days_to_go: 3,
+	categories: ["Infrastructure"],
+	title: "Pedestrianise Main Street, Palo Alto",
+	reference: "L. 6542",
+	summary: "To introduce a pedestrian-only zone on Main Street, Palo Alto, between Union St. and Grand St., from friday to Monday.",
+	commentcount: 578
+});
+
+</script>
+
+</body>
+</html>
